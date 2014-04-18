@@ -20,8 +20,9 @@ class View
     puts "| |    / _` / __| | '_ \\ / _ \\                     "
     puts "| \\__/\\ (_| \\__ \\ | | | | (_) |                    "
     puts " \\____/\\__,_|___/_|_| |_|\\___/                     "
-
-    puts "Welcome to the Command Line Casino! You're looking lucky - let's play some Blackjack!"
+    puts ""
+    puts "Welcome to the Command Line Casino!"
+    puts "You're looking lucky - let's play some Blackjack!"
   end
 
   def self.options
@@ -55,8 +56,10 @@ class View
     puts "  | | (_) | |_| |  \\ V  V /| | | | |_|"
     puts "  \\_/\\___/ \\__,_|   \\_/\\_/ |_|_| |_(_)"
     puts ""
-
-    puts "Congratulations, you win! I think you should keep playing and spend more money at the Command Line Casino. Your luck will never run out!"
+    puts "Congratulations, you win!"
+    puts "I think you should keep playing and spend"
+    puts "more money at the Command Line Casino."
+    puts "Your luck will never run out!"
   end
 
   def self.dealer_wins
@@ -68,12 +71,14 @@ class View
     puts "\\____/ \\___/|_|  |_|   \\__, (_|_|_)"
     puts "                        __/ |      "
     puts "                       |___/       "
-
+    puts ""
     puts "Sorry, looks like your luck ran out. Maybe spending more money at the Command Line Casino will bring it back! I'll go ahead and order you a martini."
   end
 
   def self.push
-    puts "Looks like there was a tie. Some people would say that means everybody wins. You should keep your luck rolling and play another round at the Command Line Casino!"
+    puts "Looks like there was a tie."
+    puts "Some people would say that means everybody wins."
+    puts "You should keep your luck rolling and play another round at the Command Line Casino!"
   end
 
   def self.again
@@ -95,6 +100,21 @@ class View
   end
 
   def self.out_of_money
-    puts "Lindsey type something funny"
+    puts " _____     _                  _     _ _          "
+    puts "|_   _|   | |                | |   (_) |         "
+    puts "  | | __ _| | _____    __ _  | |__  _| | _____   "
+    puts "  | |/ _` | |/ / _ \\  / _` | | '_ \\| | |/ / _ \\  "
+    puts "  | | (_| |   <  __/ | (_| | | | | | |   <  __/_ "
+    puts "  \\_/\\__,_|_|\\_\\___|  \\__,_| |_| |_|_|_|\\_\\___( )"
+    puts "                                              |/ "
+    puts " _                     _                         "
+    puts "| |                   | |                        "
+    puts "| | ___  ___  ___ _ __| |                        "
+    puts "| |/ _ \\/ __|/ _ \\ '__| |                        "
+    puts "| | (_) \\__ \\  __/ |  |_|                        "
+    puts "|_|\\___/|___/\\___|_|  (_)                        "
+    puts ""
+    puts "We only love you when you have money."
+    puts "And give me back that martini!"
   end
 end
