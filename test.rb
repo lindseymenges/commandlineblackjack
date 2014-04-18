@@ -64,10 +64,23 @@ assert_equals(game.player.hand.length, 4)
 assert_equals(game.deck.cards.length, 46)
 
 
-p game.dealer_score
-game.dealer_play
-p game.dealer_score
-p game.dealer.busted?
+ace = Card.new("Ace", 11)
+king = Card.new("King", 10)
+seven = Card.new("7", 7)
 
+game = Blackjack.new(player: Player.new, dealer: Dealer.new)
 
+game.player.add_card_to_hand(seven)
+game.player.add_card_to_hand(ace)
+game.dealer.add_card_to_hand(king)
+assert_equals(game.winner.class, Player)
 
+game = Blackjack.new(player: Player.new, dealer: Dealer.new)
+game.player.add_card_to_hand(seven)
+game.dealer.add_card_to_hand(king)
+assert_equals(game.winner.class, Dealer)
+
+game = Blackjack.new(player: Player.new, dealer: Dealer.new)
+game.player.add_card_to_hand(seven)
+game.dealer.add_card_to_hand(seven)
+assert_equals(game.winner, nil)

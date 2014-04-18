@@ -164,6 +164,24 @@ class Blackjack
 
   end
 
+  def winner
+    if @player.busted? && @dealer.busted?
+      return nil
+    elsif @player.busted?
+      return @dealer
+    elsif @dealer.busted?
+      return @player
+    elsif @player.score > @dealer.score
+      return @player
+    elsif @player.score < @dealer.score
+      return @dealer
+    elsif @player.score == @dealer.score
+      return nil
+    else
+      "Error"
+    end 
+  end
+
   private
 
   def dealer_score_under_17?
