@@ -6,7 +6,6 @@ class Player < ActiveRecord::Base
   def initialize(args = {})
     super
     @hand = []
-    # @name = args.fetch(:name, nil)
   end
 
   def add_card_to_hand(card)

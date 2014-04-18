@@ -7,7 +7,8 @@ class BlackjackGame < ActiveRecord::Base
 
   def initialize(args={})
     @player = args.fetch(:player)
-    @dealer = args.fetch(:dealer)
+    @dealer = Dealer.new
+    @over = false
   end
 
   def start
@@ -36,6 +37,15 @@ class BlackjackGame < ActiveRecord::Base
       @dealer.add_card_to_hand(@deck.deal)
     end
 
+    @over = true
+
+  end
+
+  def over?
+    if @player.busted?
+      @over = true
+    end
+    @over
   end
 
   def winner
@@ -51,7 +61,7 @@ class BlackjackGame < ActiveRecord::Base
       return @dealer
     elsif @player.score == @dealer.score
       return nil
-    end 
+    end
   end
 
   private
