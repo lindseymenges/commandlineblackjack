@@ -8,12 +8,13 @@ class Controller
     #   View.view_cards
     #   View.options
     #   user_input = gets.chomp
-    #   if user_input == "hit"
+    #   if user_input.upcase == "HIT"
     #     #call the hit method
-    #   elsif user_input == "stand"
+    #   elsif user_input.upcase == "STAND"
     #     #call the stand method
     #   else
     #     View.invalid_selection
+        # View.options
     #   end
     # end
     View.the_game_is_over
