@@ -1,13 +1,26 @@
 class Player < ActiveRecord::Base
 	has_many :blackjack_games
 
-  attr_reader :hand
+  attr_reader :hand, :money
 
   def initialize(args = {})
     super
     @hand = []
+    @money = 500
+    @bet = 0
+  end
+  def bet!(amount)
+    @bet = amount*2
+    @money = @money - amount
+  end
+  def won
+    @money = @money+=@bet
   end
 
+  def reset
+    @hand = []
+    @bet = 0
+  end
   def add_card_to_hand(card)
     @hand << card
   end

@@ -57,15 +57,15 @@ assert_equals(player2.score, 14)
 game = BlackjackGame.new(player: Player.new, dealer: Dealer.new)
 
 game.start
-assert_equals(game.deck.cards.length, 48)
-assert_equals(game.dealer.hand.length, 2)
+assert_equals(game.deck.cards.length, 49)
+assert_equals(game.dealer.hand.length, 1)
 assert_equals(game.player.hand.length, 2)
 game.hit
 assert_equals(game.player.hand.length, 3)
-assert_equals(game.deck.cards.length, 47)
+assert_equals(game.deck.cards.length, 48)
 game.hit
 assert_equals(game.player.hand.length, 4)
-assert_equals(game.deck.cards.length, 46)
+assert_equals(game.deck.cards.length, 47)
 
 
 ace = Card.new("Ace", 11)
@@ -88,3 +88,6 @@ game = BlackjackGame.new(player: Player.new, dealer: Dealer.new)
 game.player.add_card_to_hand(seven)
 game.dealer.add_card_to_hand(seven)
 assert_equals(game.winner, nil)
+
+deck = Deck.new(Factory.make_deck)
+p deck.cards.map {|card| card.suit}
