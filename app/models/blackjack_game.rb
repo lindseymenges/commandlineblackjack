@@ -16,8 +16,8 @@ class BlackjackGame < ActiveRecord::Base
     @deck.shuffle!
     2.times do
       @player.add_card_to_hand(@deck.deal)
-      @dealer.add_card_to_hand(@deck.deal)
     end
+    @dealer.add_card_to_hand(@deck.deal)
   end
 
   def hit
