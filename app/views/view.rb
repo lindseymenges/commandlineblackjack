@@ -8,8 +8,10 @@ class View
   end
 
   def self.view_cards(player_score, dealer_score)
+    puts "\n"
     puts "Your current score is: #{player_score}"
     puts "The dealer is showing: #{dealer_score}"
+    puts "\n"
   end
 
   def self.invalid_selection
@@ -18,8 +20,10 @@ class View
 
   def self.the_game_is_over(player_score, dealer_score)
     puts "The game has ended!"
+    puts "\n"
     puts "Your total score is: #{player_score}"
     puts "The dealer's total score is: #{dealer_score}"
+    puts "\n"
   end
 
   def self.player_wins
@@ -32,5 +36,27 @@ class View
 
   def self.push
     puts "Looks like there was a tie. Some people would say that means everybody wins. You should keep your luck rolling and play another round at the Command Line Casino!"
+  end
+
+  def self.again
+    puts "Would you like to deal or exit?"
+  end
+
+  def self.money(money)
+    puts "\n"
+    puts "You currently have $#{money}"
+    puts "\n"
+  end
+
+  def self.bet
+    puts "Please enter how many dollars you would like to bet"
+  end
+
+  def self.error
+    puts "Invalid entry please select again"
+  end
+
+  def self.out_of_money
+    puts "Lindsey type something funny"
   end
 end

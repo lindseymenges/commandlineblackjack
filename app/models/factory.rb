@@ -16,11 +16,17 @@ module Factory
      "King" => 10,
      "Ace" => 11}
 
+    suits = ["heart", "diamond", "club", "spade"]
+
     deck_array = []
-    4.times do
+    suit_counter = 0
+    4.times do |x|
+
         card_hash.each do |display , value|
-        deck_array << Card.new(display.to_s,value)
+        deck_array << Card.new(display.to_s,value, suits[x])
+        # suit_counter += 1
       end
+
     end
     deck_array
   end

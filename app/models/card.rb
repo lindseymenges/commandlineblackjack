@@ -1,9 +1,10 @@
 class Card
-  attr_reader :display_value, :score_value
+  attr_reader :display_value, :score_value, :suit
 
-  def initialize(display_value, score_value)
+  def initialize(display_value, score_value, suit = nil)
     @display_value = display_value
     @score_value = score_value
+    @suit = suit
   end
 
   def change_ace_score
