@@ -1,4 +1,4 @@
-require_relative '../app/models/blackjack'
+require_relative '../app/models/blackjack_game'
 require_relative '../app/models/card'
 require_relative '../app/models/dealer'
 require_relative '../app/models/deck'

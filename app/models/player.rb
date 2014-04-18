@@ -3,8 +3,10 @@ class Player < ActiveRecord::Base
 
   attr_reader :hand
 
-  def initialize
+  def initialize(args = {})
+    super
     @hand = []
+    # @name = args.fetch(:name, nil)
   end
 
   def add_card_to_hand(card)

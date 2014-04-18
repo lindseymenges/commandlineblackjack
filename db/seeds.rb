@@ -1,9 +1,18 @@
 require 'faker'
+require 'debugger'
+
 require_relative '../config/application'
 
-50.times do |fake_task_description|
-  Task.create(:description => Faker::Company.bs)
+# 10.times do
+# 	puts Faker::Name.first_name
+# end
+
+
+# debugger
+10.times do
+  Player.create(:name => Faker::Name.first_name)
 end
+
 
 
 
