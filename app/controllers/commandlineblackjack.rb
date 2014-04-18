@@ -19,14 +19,30 @@ class Controller
       end
       @player.bet!(bet)
       @game.start
+      puts "Your hand"
+      card_array = @player.hand
+      card_array.each do |card|
+        CardString.print(card)
+      end
       View.view_cards(@game.player_score, @game.dealer_score)
+
       until @game.over?
         View.options
         user_input = gets.chomp
         if user_input.upcase == "HIT"
           @game.hit
+          puts "Your hand"
+          card_array = @player.hand
+          card_array.each do |card|
+            CardString.print(card)
+          end
         elsif user_input.upcase == "STAND"
+          puts "Dealer hand"
           @game.dealer_play
+          card_array = @game.dealer.hand
+          card_array.each do |card|
+            CardString.print(card)
+          end
         else
           View.invalid_selection
         end
